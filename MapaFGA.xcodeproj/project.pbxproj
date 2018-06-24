@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D40AF20E20DB3DE4009C5BAB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40AF20D20DB3DE4009C5BAB /* TabBarController.swift */; };
 		D434897020B5A64700B0CF6C /* SegmentedControlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D434896F20B5A64700B0CF6C /* SegmentedControlExtension.swift */; };
+		D4517BD020D42EFD009D078F /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4517BCF20D42EFD009D078F /* Manager.swift */; };
+		D48E5D3820DC5ECA009ED0AD /* MapaFGATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E5D3620DC5ECA009ED0AD /* MapaFGATableViewCell.swift */; };
+		D48E5D3920DC5ECA009ED0AD /* MapaFGATableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D48E5D3720DC5ECA009ED0AD /* MapaFGATableViewCell.xib */; };
 		D49520D220A9CF0000922C8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49520D120A9CF0000922C8A /* AppDelegate.swift */; };
 		D49520D420A9CF0000922C8A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49520D320A9CF0000922C8A /* MainViewController.swift */; };
 		D49520D720A9CF0000922C8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49520D520A9CF0000922C8A /* Main.storyboard */; };
@@ -15,10 +19,15 @@
 		D49520DC20A9CF0100922C8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49520DA20A9CF0100922C8A /* LaunchScreen.storyboard */; };
 		D4BA44F920ABF81F00210E13 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BA44F820ABF81F00210E13 /* SearchController.swift */; };
 		D4BA44FB20ABF83200210E13 /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BA44FA20ABF83200210E13 /* FavoritesController.swift */; };
+		D4F823D720D1581F0062126D /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F823D620D1581F0062126D /* Place.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D40AF20D20DB3DE4009C5BAB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D434896F20B5A64700B0CF6C /* SegmentedControlExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlExtension.swift; sourceTree = "<group>"; };
+		D4517BCF20D42EFD009D078F /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		D48E5D3620DC5ECA009ED0AD /* MapaFGATableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaFGATableViewCell.swift; sourceTree = "<group>"; };
+		D48E5D3720DC5ECA009ED0AD /* MapaFGATableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapaFGATableViewCell.xib; sourceTree = "<group>"; };
 		D49520CE20A9CF0000922C8A /* MapaFGA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapaFGA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49520D120A9CF0000922C8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D49520D320A9CF0000922C8A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +37,7 @@
 		D49520DD20A9CF0100922C8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4BA44F820ABF81F00210E13 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		D4BA44FA20ABF83200210E13 /* FavoritesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesController.swift; sourceTree = "<group>"; };
+		D4F823D620D1581F0062126D /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +70,38 @@
 		D49520D020A9CF0000922C8A /* MapaFGA */ = {
 			isa = PBXGroup;
 			children = (
+				D4F823D920D158320062126D /* ViewControllers */,
+				D4F823D820D158240062126D /* Model */,
 				D49520D120A9CF0000922C8A /* AppDelegate.swift */,
-				D49520D320A9CF0000922C8A /* MainViewController.swift */,
 				D49520D520A9CF0000922C8A /* Main.storyboard */,
 				D49520D820A9CF0100922C8A /* Assets.xcassets */,
 				D49520DA20A9CF0100922C8A /* LaunchScreen.storyboard */,
 				D49520DD20A9CF0100922C8A /* Info.plist */,
+			);
+			path = MapaFGA;
+			sourceTree = "<group>";
+		};
+		D4F823D820D158240062126D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4F823D620D1581F0062126D /* Place.swift */,
+				D4517BCF20D42EFD009D078F /* Manager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D4F823D920D158320062126D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D49520D320A9CF0000922C8A /* MainViewController.swift */,
 				D4BA44F820ABF81F00210E13 /* SearchController.swift */,
 				D4BA44FA20ABF83200210E13 /* FavoritesController.swift */,
 				D434896F20B5A64700B0CF6C /* SegmentedControlExtension.swift */,
+				D40AF20D20DB3DE4009C5BAB /* TabBarController.swift */,
+				D48E5D3620DC5ECA009ED0AD /* MapaFGATableViewCell.swift */,
+				D48E5D3720DC5ECA009ED0AD /* MapaFGATableViewCell.xib */,
 			);
-			path = MapaFGA;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D49520DC20A9CF0100922C8A /* LaunchScreen.storyboard in Resources */,
+				D48E5D3920DC5ECA009ED0AD /* MapaFGATableViewCell.xib in Resources */,
 				D49520D920A9CF0100922C8A /* Assets.xcassets in Resources */,
 				D49520D720A9CF0000922C8A /* Main.storyboard in Resources */,
 			);
@@ -145,8 +177,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D49520D420A9CF0000922C8A /* MainViewController.swift in Sources */,
+				D40AF20E20DB3DE4009C5BAB /* TabBarController.swift in Sources */,
 				D4BA44F920ABF81F00210E13 /* SearchController.swift in Sources */,
+				D48E5D3820DC5ECA009ED0AD /* MapaFGATableViewCell.swift in Sources */,
 				D49520D220A9CF0000922C8A /* AppDelegate.swift in Sources */,
+				D4F823D720D1581F0062126D /* Place.swift in Sources */,
+				D4517BD020D42EFD009D078F /* Manager.swift in Sources */,
 				D4BA44FB20ABF83200210E13 /* FavoritesController.swift in Sources */,
 				D434897020B5A64700B0CF6C /* SegmentedControlExtension.swift in Sources */,
 			);

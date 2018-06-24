@@ -11,18 +11,29 @@ import UIKit
 
 class FavoritesController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
+
+  @IBOutlet weak var tableView: UITableView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    tableView.delegate = self
+    tableView.dataSource = self
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(true)
+    tableView.reloadData()
+    
+  }
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 9
+    return Manager.sharedInstance.favoritePlaces.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-    cell.textLabel?.text = "Mocap"
+    cell.textLabel?.text = Manager.sharedInstance.favoritePlaces[indexPath.row].name
+    cell.detailTextLabel?.text = Manager.sharedInstance.favoritePlaces[indexPath.row].name
+    
     return cell
   }
   
